@@ -1,0 +1,42 @@
+package main;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
+import assembler.Assembler;
+import spring.*;
+public class MainForAssembler {
+	private static Assembler assembler = new Assembler();
+	public static void main(String[] args) {
+			BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+			while(true){
+				System.out.println("명령어를 입력하세요: ");
+				String command = reader.readLine();
+				if(command.equalsIgnoreCase("exit")){
+					System.out.println("종료합니다.");
+					break;
+				}
+				if(command.startsWith("new ")){
+					processNewCommand(command.split(" "));		// command 문자열 배열 전달
+					continue;
+				}
+				else if(command.startsWith("change ")){
+					processChangeCommand(command.split(" "));	// command 문자열 배열 전달
+					continue;
+				}
+				printHelp();
+			}
+	}
+
+	private static void processNewCommand(String[] arg){
+		
+	}
+	
+	private static void processNewCommand(String[] arg){
+		
+	}
+	
+	private static void printHelp(){
+		
+	}
+}
